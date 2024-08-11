@@ -1,0 +1,33 @@
+{
+    "schema_version": 1,
+    "quilt_loader": {
+        "group": "${group}",
+        "id": "nouiontab",
+        "version": "${version}",
+        "metadata": {
+            "name": "No UI on Tab",
+            "description": "A simple Mod that Hides parts of the Player's UI while they are viewing the Player Tab List.",
+            "contributors": {
+                "Andre601": "Owner"
+            },
+            "contact": {},
+            "icon": "assets/nouiontab/icon.png",
+            "license": "MIT"
+        },
+        "intermediate_mappings": "net.fabricmc:intermediary",
+        "entrypoints": {
+            "init": "ch.andre601.nouiontab.NoUIOnTab"
+        },
+        "depends": [
+            {
+                "id": "quilt_loader",
+                "versions": ">=0.26.4-beta.1"
+            },
+            {
+                "id": "minecraft",
+                "versions": ">=1.21"
+            }
+        ]
+    },
+    "mixin": "nouiontab.mixins.json"
+}
