@@ -1,5 +1,6 @@
 package ch.andre601.nouiontab.mixin;
 
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.hud.PlayerListHud;
 import net.minecraft.client.gui.hud.in_game.InGameHud;
 import org.spongepowered.asm.mixin.Final;
@@ -17,14 +18,27 @@ public class InGameHudMixin{
 	private PlayerListHud playerListHud;
 
 	@Inject(
+		method = "<init>",
+		at = @At(
+			value = "FIELD",
+			target = "Lnet/minecraft/client/gui/hud/in_game/InGameHud;renderList:Lnet/minecraft/client/gui/RenderList;"
+		)
+	)
+	private void onConstructor(MinecraftClient client, CallbackInfo ci){
+
+	}
+
+	@Inject(
 		method = {
 			"renderOverlay",
 			"renderCrosshair",
 			"renderHotbar",
 			"renderExperienceLevel",
 			"renderStatusEffectOverlay",
+			"method_55808",
 
 			"renderDemoTimer",
+			"method_55807",
 			"renderScoreboard",
 			"renderOverlayMessage",
 			"renderTitles",
