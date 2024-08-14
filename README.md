@@ -8,7 +8,7 @@
 </a>
 
 > [!NOTE]
-> This is the source code of the Quilt version. For the Fabric version, check the `fabric` branch!
+> This is the source code of the Quilt version. For the Fabric version, click [here](https://github.com/Andre601/NoUIOnTab-Fabric)!
 
 *No UI on Tab* is a Quilt Mod designed to hide UI elements such as the scoreboard, Chat, Titles, Bossbar, Hotbar, etc. when the player opens the Player list.
 
